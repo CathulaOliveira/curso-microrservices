@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: msgateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/mscourserealm
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://cursoms-eureka-user:l&e6KZ61wQr3@localhost:8761/eureka
